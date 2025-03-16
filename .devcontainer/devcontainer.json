@@ -1,8 +1,8 @@
 {
   "name": "Bun React App",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20", // Use a Node.js base image
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20",
   "features": {
-    "ghcr.io/eitsupi/devcontainer-features/bun:1": {} // Install Bun using a dev container feature
+    "ghcr.io/eitsupi/devcontainer-features/bun:1": {}
   },
   "customizations": {
     "vscode": {
@@ -13,8 +13,8 @@
       ]
     }
   },
-  "postCreateCommand": "bun install", // Install dependencies after creation
-  "forwardPorts": [5173], // Forward the Vite dev server port
+  "postCreateCommand": "bun install",
+  "forwardPorts": [5173],
   "portsAttributes": {
     "5173": {
       "label": "Application"
