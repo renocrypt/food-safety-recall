@@ -1,23 +1,17 @@
 {
-  "name": "Bun React App",
+  "name": "Bun Development Environment",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20",
   "features": {
-    "ghcr.io/eitsupi/devcontainer-features/bun:1": {}
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    }
   },
   "customizations": {
     "vscode": {
       "extensions": [
-        "oven.bun-vscode",
-        "dbaeumer.vscode-eslint",
-        "bradlc.vscode-tailwindcss"
+        "oven.bun-vscode"
       ]
     }
   },
-  "postCreateCommand": "bun install",
-  "forwardPorts": [5173],
-  "portsAttributes": {
-    "5173": {
-      "label": "Application"
-    }
-  }
+  "postCreateCommand": "curl -fsSL https://bun.sh/install | bash && echo 'export BUN_INSTALL=\"$HOME/.bun\"' >> ~/.bashrc && echo 'export PATH=\"$BUN_INSTALL/bin:$PATH\"' >> ~/.bashrc"
 }
